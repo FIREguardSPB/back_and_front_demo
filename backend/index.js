@@ -14,6 +14,10 @@ app.use(express.urlencoded({extended: false}))
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '..','build')))
 app.use('/api', apiRouter)
+
+setInterval(() => {fetch('https://https://back-front-demo.herokuapp.com/')
+  .then(res => res.text())
+  .then(body => console.log(body))}, 1000*60*20)
 // app.use('/', authRouter)
 async function startApp() {
     try {
