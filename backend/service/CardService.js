@@ -10,7 +10,6 @@ export async function getCards() {
 
 export async function deletedCard(id) {
   if (!id) {
-    console.log(id)
     throw new Error('Invalid ID')
   }
   return Card.findByIdAndUpdate(id, {deleted: true});
