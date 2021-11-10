@@ -60,7 +60,7 @@ const CardUno = ({addressInfo, fio, date, phone, id, index, setFindResult, cards
         <DeleteButton onClick={(ev) => {
           handleDelete()
         }}/>
-        {`${index}`}
+        {`${index+1}`}
       </WrapperCard>
     </>
   );
