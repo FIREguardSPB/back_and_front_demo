@@ -12,8 +12,9 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, '..', 'project','build')))
+app.use(express.static(path.join(__dirname, '..','build')))
 app.use('/api', apiRouter)
+// app.use('/', authRouter)
 async function startApp() {
     try {
         await mongoose.connect(DB_URL, {useUnifiedTopology: true, useNewUrlParser: true})
