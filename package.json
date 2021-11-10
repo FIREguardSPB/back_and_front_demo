@@ -17,6 +17,9 @@
     "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1"
   },
+  "engines": {
+    "node": "16.11.1"
+  },
   "scripts": {
     "start-client": "react-dotenv && react-scripts start",
     "build": "react-dotenv && react-scripts build && (cd ../backend && yarn install)",

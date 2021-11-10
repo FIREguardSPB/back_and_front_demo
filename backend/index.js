@@ -1,5 +1,4 @@
 import express from 'express';
-// import fileUpload from 'express-fileupload';
 import mongoose from 'mongoose';
 import apiRouter from './route/apiRoutes.js'
 import authRouter from "./route/authRoutes.js"
@@ -15,14 +14,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}))
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '..', 'project','build')))
-
-// app.get('/', function (req, res) {
-//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
-// app.use('/api', router);
-// app.use(fileUpload({}));
-// app.use('/auth', authRouter)
-// console.log(`server working on ${PORT}`
 app.use('/api', apiRouter)
 app.use('/', authRouter)
 async function startApp() {
