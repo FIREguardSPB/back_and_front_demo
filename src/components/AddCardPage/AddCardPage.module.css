@@ -1,0 +1,10 @@
+.Data_Box{
+    width: 500px;
+    border: 1px solid ;
+
+}
+.Data_Box:focus-within{
+/*outline-color: red;*/
+    border: 0.1rem solid red;
+    outline: 1px solid red;
+}
